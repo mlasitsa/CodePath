@@ -29,6 +29,10 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
+<a href="https://submissions.us-east-1.linodeobjects.com/web102/mQyWN0x8.gif" target="_blank">
+  <img src="https://submissions.us-east-1.linodeobjects.com/web102/mQyWN0x8.gif" width="600" alt="Demo GIF" />
+</a>
+
 Here's a walkthrough of implemented required features:
 <video src="https://drive.google.com/file/d/1oDjoJ0Z5wACEtokT6AvRRiBs4sIKUtNX/view?usp=sharing" width="600" controls></video>
 
