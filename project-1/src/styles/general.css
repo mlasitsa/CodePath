@@ -1,0 +1,17 @@
+.button {
+    display: flex;
+    background-color: cornflowerblue;
+    color: white;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: chartreuse;
+    color: white;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; 
+}
