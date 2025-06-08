@@ -30,7 +30,11 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
-<video src="demo.mp4" width="600" controls></video>
+<video src="https://drive.google.com/file/d/1oDjoJ0Z5wACEtokT6AvRRiBs4sIKUtNX/view?usp=sharing" width="600" controls></video>
+
+https://drive.google.com/file/d/1oDjoJ0Z5wACEtokT6AvRRiBs4sIKUtNX/view?usp=sharing
+
+(For some reason I cannot use imgur anymore, it doesnt load the video)
 
 ## Notes
 
