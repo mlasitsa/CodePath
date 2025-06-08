@@ -30,7 +30,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
-
+<video src="demo.mp4" width="600" controls></video>
 
 ## Notes
 
