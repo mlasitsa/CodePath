@@ -8,7 +8,7 @@ export const useBreweries = () => {
   const { setAll } = useBreweryStore()
 
   return useQuery({
-    queryKey: ['breweries'],
+    queryKey: ['breweries'], // does query key need to match with the zustand? More examples when key matters, on mutations? 
     queryFn: async () => {
       const res = await fetch('https://api.openbrewerydb.org/v1/breweries?per_page=100')
       const json = await res.json()

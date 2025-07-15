@@ -9,7 +9,7 @@ const queryClient = new QueryClient()
 
 type Props = {
   children: ReactNode
-}
+}   // ASk question on this
 
 export default function QueryProvider({ children }: Props) {
   return (
