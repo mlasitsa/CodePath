@@ -1,0 +1,13 @@
+{
+  "name": "project-7",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "dev:frontend": "cd frontend && npm run dev",
+  "dev:backend": "cd backend && npx ts-node-dev src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
