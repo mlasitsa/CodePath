@@ -1,59 +1,73 @@
-# Web Development Project 7 - Post Manager App
+# Web Development Final Project - Postify
 
 Submitted by: **Max Lasitsa**
 
-This web app: **Allows users to create, view, edit, and delete personalized "posts" that store information like the creator's name, username, and a selected attribute. It provides a sidebar for easy navigation, a form to add new posts, and dedicated pages for post details and editing.**
+This web app: **Postify is a full-stack social posting platform where users can create, edit, delete, comment on, and upvote posts. It includes search, sort, and detailed post views — all managed through a clean, responsive UI and a single Supabase-backed `posts` table.**
 
-Time spent: **7 hours spent in total**
+Time spent: **10 hours spent in total**
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The web app contains a page that features a create form to add a new crewmate**
-  - Users can name the crewmate
-  - Users can set the crewmate’s attributes by clicking on one of several values
-- [x] **The web app includes a summary page of all the user’s added crewmates**
-  - The web app contains a summary page dedicated to displaying all the crewmates the user has made so far
-  - The summary page is sorted by creation date such that the most recently created crewmates appear at the top
-- [x] **A previously created crewmate can be updated from the list of crewmates in the summary page**
-  - Each crewmate has an edit button that will take users to an update form for the relevant crewmate
-  - Users can see the current attributes of their crewmate on the update form
-  - After editing the crewmate's attribute values using the form, the user can immediately see those changes reflected in the update form and on the summary page 
-- [x] **A previously created crewmate can be deleted from the crewmate list**
-  - Using the edit form detailed in the previous _crewmates can be updated_ feature, there is a button that allows users to delete that crewmate
-  - After deleting a crewmate, the crewmate should no longer be visible in the summary page
-- [x] **Each crewmate has a direct, unique URL link to an info page about them**
-  - Clicking on a crewmate in the summary page navigates to a detail page for that crewmate
-  - The detail page contains extra information about the crewmate not included in the summary page
-  - Users can navigate to to the edit form from the detail page
+- [x] **Web app includes a create form that allows the user to create posts**
+  - Form requires users to add a post title
+  - Forms have the *option* for users to add: 
+    - additional textual content
+    - an image added as an external image URL
+- [x] **Web app includes a home feed displaying previously created posts**
+  - Web app includes home feed displaying previously created posts
+  - Each post on the posts feed shows:
+    - creation time
+    - title 
+    - upvotes count
+  - Clicking on a post directs the user to a new page for the selected post
+- [x] **Users can view posts in different ways**
+  - Users can sort posts by either:
+    - creation time
+    - upvotes count
+  - Users can search for posts by title
+- [x] **Users can interact with each post in different ways**
+  - Each post has its own detail page showing:
+    - content
+    - image
+    - comments
+  - Users can leave comments on a post
+  - Each post includes an upvote button:
+    - Each click increases the post's upvotes count by one
+    - Users can upvote any post any number of times
+- [x] **A post that a user previously created can be edited or deleted from its post page**
+  - After a user creates a new post, they can edit it
+  - A post can be deleted from its post page
+
+## Optional Features
 
 The following **optional** features are implemented:
 
-- [ ] A crewmate can be given a category upon creation which restricts their attribute value options
-- [ ] A section of the summary page displays summary statistics about a user’s crew
-- [ ] The summary page displays a custom “success” metric about a user’s crew
+- [x] Web app implements pseudo-authentication
+  - Upon launching the app, the user must enter a username which is saved in `localStorage`
+  - Only the original post creator (by username match) can edit or delete a post
 
-The following **additional** features are implemented:
+## Additional Features
 
-* [x] Full backend using Express + Supabase integration (CRUD)
-* [x] Class-based Supabase service for scalable API interactions
-* [x] Inline styling applied for every page (clean, readable layout)
-* [x] Dedicated pages for create, edit, view, and list
-* [x] Error handling with proper `try-catch` in backend controllers
-* [x] Full monorepo setup with separated `frontend` and `backend` folders
+- [x] Comments are stored inside the `posts` table directly using a JSON array
+- [x] Minimal, clean inline styling for an accessible and elegant layout
+- [x] Fully RESTful API built with Express.js and Supabase
+- [x] Post upvotes and comment submissions update live without reloading
+- [x] Upvote count displayed on both list and detail pages
+- [x] Reusable frontend components for layout and forms
+
 
 ## Notes
 
-* Supabase had a single table (`posts`) that stored all required user and content data.
-* Initial errors stemmed from incorrect table references (`routes` instead of `posts`), fixed after clarifying schema.
-* Encountered CORS and 500 errors due to mismatched API route logic and Supabase table structure.
-* Styling was carefully crafted inline across all pages for clarity and responsiveness.
-* Learned best practices around structuring a full-stack monorepo, service abstraction, and Supabase usage.
+Some challenges encountered:
+- Implementing comment storage directly within the `posts` table while keeping frontend logic clean
+- Ensuring post editing and deletion was secure and tied to the correct pseudo-authenticated user
+- Avoiding extra complexity like databases for users or separate comment tables while preserving full functionality
 
 ## License
 
-    Copyright 2025 Max Lasitsa
+    Copyright Max Lasitsa [2025]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
